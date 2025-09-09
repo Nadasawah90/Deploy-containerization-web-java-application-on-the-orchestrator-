@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: vproapp
-        image: gamalm2041/app_image
+        image:  nadahassan2024/webapp:v1
         ports:
           - containerPort: 8080
       initContainers:
