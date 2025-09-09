@@ -43,6 +43,21 @@
  kubectl config set-context kubernetes-admin@kubernetes --namespace myapp
 
 <img width="456" height="130" alt="image" src="https://github.com/user-attachments/assets/98ec2ee4-4ff3-41d8-83db-a987769c4396" />
+==> create secret application file 
+
+==> create only my deployment manually as i faced issue on this pod when created 
+
+ kubectl create deployment vproapp   --image=nadahassan2024/webapp:v1   --port=8080   -n myapp
+
+ kubectl apply -f app-service.yml -n myapp
+
+  kubectl expose deployment vproapp   --name=vproapp-service   --type=NodePort   --port=8080   --target-port=8080   -n myapp
+
+==> create config file for DB 
+
+ create configmap vprodb-initdb   --from-file=db_backup.sql   -n myapp
+
+as i copy this file from  source code to the same directory of the deployments yaml files .
 
 ==> kubectl deploy -f . 
 
