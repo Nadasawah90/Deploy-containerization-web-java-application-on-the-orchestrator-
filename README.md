@@ -43,6 +43,7 @@
  kubectl config set-context kubernetes-admin@kubernetes --namespace myapp
 
 <img width="456" height="130" alt="image" src="https://github.com/user-attachments/assets/98ec2ee4-4ff3-41d8-83db-a987769c4396" />
+
 ==> create secret application file 
 
 ==> create only my deployment manually as i faced issue on this pod when created 
@@ -58,6 +59,10 @@
  create configmap vprodb-initdb   --from-file=db_backup.sql   -n myapp
 
 as i copy this file from  source code to the same directory of the deployments yaml files .
+
+==> create secret keys services 
+
+kubectl create secret generic app-secret --from-literal db-pass=admin123 --from-literal rmq-pass=test -o yaml --dry-run=client
 
 ==> kubectl deploy -f . 
 
