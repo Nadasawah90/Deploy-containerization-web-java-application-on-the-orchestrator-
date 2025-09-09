@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: vprodb
-          image: gamalm2041/db_image
+          image: app_db:v1
           ports:
             - containerPort: 3306
           env:
