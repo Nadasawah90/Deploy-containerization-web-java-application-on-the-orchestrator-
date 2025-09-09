@@ -1,6 +1,6 @@
 # Deploy-containerization-web-java-application-on-the-orchestrator-
 
-To  deploy the appplication on the orachestraor we need to make the following charts : 
+## To  deploy the appplication on the orachestraor we need to make the following charts : 
 
           ┌───────────────┐
           │   Load Balancer│
@@ -26,7 +26,7 @@ To  deploy the appplication on the orachestraor we need to make the following ch
               └───────────┘
 
 
-Prerequistes : 
+## Prerequistes : 
 
 1-  Four deployment for "APP , MC , RabbitMQ , DB" to deploy pods" containes " 
 
@@ -38,18 +38,22 @@ Prerequistes :
 
 ==> create namespace with name ns = myapp 
 
-<img width="422" height="196" alt="image" src="https://github.com/user-attachments/assets/136c3ccf-9694-4b58-beeb-7462930738b1" />
+ kubectl create namespace myapp
 
+ kubectl config set-context kubernetes-admin@kubernetes --namespace myapp
 
+<img width="456" height="130" alt="image" src="https://github.com/user-attachments/assets/98ec2ee4-4ff3-41d8-83db-a987769c4396" />
 
 ==> kubectl deploy -f . 
 
-<img width="1877" height="548" alt="image" src="https://github.com/user-attachments/assets/ba63a0b3-a3a1-47ec-958a-0817e1f459f0" />
+<img width="1272" height="371" alt="image" src="https://github.com/user-attachments/assets/01d293f4-4306-422a-8cff-07d097ae3495" />
 
-==> Test environment 
+## Test environment 
+
  using ip of worker 1 as my pods deployed on it : 192.168.56.18 with internal port : 32229  
 
-<img width="1433" height="690" alt="image" src="https://github.com/user-attachments/assets/ae40e8e5-ec57-4db6-9500-a40fd0b21847" />
+<img width="1808" height="865" alt="image" src="https://github.com/user-attachments/assets/3a58b872-4c64-4fa7-a9d2-670514037d98" />
 
 
-<img width="1842" height="973" alt="image" src="https://github.com/user-attachments/assets/12a0191e-95e4-4d56-9dac-df40ef3b4d7f" />
+
+
