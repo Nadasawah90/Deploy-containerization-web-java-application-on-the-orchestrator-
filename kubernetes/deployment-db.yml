@@ -25,7 +25,4 @@ spec:
                 secretKeyRef:
                   name: app-secret
                   key: db-pass
-      initContainers:
-        - name: busybox
-          image: busybox:latest
-          args: ["rm", "-rf", "/var/lib/mysql/lost+found"]
+    
