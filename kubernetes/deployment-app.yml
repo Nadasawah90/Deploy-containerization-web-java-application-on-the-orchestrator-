@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: vproapp
-        image: nadahassan2024/webapptest:v1 
+        image: nadahassan2024/jenkinswebapp:v1
         ports:
           - containerPort: 8080
      
